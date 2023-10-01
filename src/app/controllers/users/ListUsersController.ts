@@ -5,7 +5,9 @@ class ListUsersController {
   async handle(request: Request, response: Response) {
     const users = await User.find();
 
-    return response.json(users);
+    return response.json({
+      results: users,
+    });
   }
 }
 
