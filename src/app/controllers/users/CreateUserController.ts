@@ -11,7 +11,10 @@ class CreateUserController {
 
     await user.save();
 
-    return response.json(user);
+    return response.json({
+      status: "success",
+      response: user,
+    });
   }
 }
 
